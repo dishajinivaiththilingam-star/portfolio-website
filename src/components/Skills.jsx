@@ -3,10 +3,8 @@ const skills = [
   { name: "JavaScript", cat: "Frontend", pct: 83 },
   { name: "React.js", cat: "Frontend", pct: 82 },
   { name: "Vite", cat: "Frontend", pct: 76 },
-  { name: "Bootstrap / Tailwind", cat: "Frontend", pct: 80 },
   { name: "Node.js", cat: "Backend", pct: 78 },
-  { name: "Express.js", cat: "Backend", pct: 76 },
-  { name: "MySQL", cat: "Backend", pct: 80 },
+  { name: "MySQL", cat: "Database", pct: 80 },
   { name: "REST APIs", cat: "Backend", pct: 78 },
   { name: "Full-Stack Dev", cat: "Fullstack", pct: 75 },
 ];
@@ -15,6 +13,7 @@ const catStyle = {
   Frontend: { bg: "#e1f5ee", accent: "#0f7c6b", text: "#085041" },
   Backend:  { bg: "#faece7", accent: "#d85a30", text: "#712b13" },
   Fullstack:{ bg: "#eeedfe", accent: "#534ab7", text: "#3c3489" },
+   Database: { bg: "#faece7", accent: "#d85a30", text: "#712b13" },
 };
 
 export default function Skills() {

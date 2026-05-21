@@ -35,8 +35,9 @@ export default function Contact() {
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {[
                 { label: "Phone", val: "+94 76 77 94 739", icon: "📞" },
+                { label: "GitHub",val: "https://github.com/dishajinivaiththilingam-star", icon: "💻", },
                 { label: "Email", val: "dishajinivaiththilingam@gmail.com", icon: "✉️" },
-                { label: "Location", val: "D4, Maruthanagar, Kilinochchi", icon: "📍" },
+                { label: "Location", val: "SriLanka", icon: "📍" },
               ].map(({ label, val, icon }) => (
                 <div key={label} style={{
                   display: "flex", alignItems: "center", gap: "1rem",
