@@ -1,8 +1,7 @@
 const skills = [
-  { name: "HTML", cat: "Frontend", pct: 90 },
   { name: "JavaScript", cat: "Frontend", pct: 83 },
-  { name: "React.js", cat: "Frontend", pct: 82 },
-  { name: "Vite", cat: "Frontend", pct: 76 },
+  { name: "React.js", cat: "Frontend", pct: 100 },
+  { name: "Vite", cat: "Frontend", pct: 100 },
   { name: "Node.js", cat: "Backend", pct: 78 },
   { name: "MySQL", cat: "Database", pct: 80 },
   { name: "REST APIs", cat: "Backend", pct: 78 },

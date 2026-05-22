@@ -169,31 +169,7 @@ export default function Hero() {
               Get in Touch
             </button>
 
-            <button
-              style={{
-                background: "transparent",
-                color: "#111",
-                border: "1.5px solid #111",
-                padding: "1rem 2.2rem",
-                fontFamily: "'Space Grotesk',sans-serif",
-                fontWeight: 700,
-                fontSize: "0.8rem",
-                letterSpacing: "0.08em",
-                cursor: "pointer",
-                textTransform: "uppercase",
-                transition: "0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#111";
-                e.currentTarget.style.color = "#fff";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#111";
-              }}
-            >
-              Explore More
-            </button>
+            
 
           </div>
         </div>

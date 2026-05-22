@@ -112,98 +112,115 @@ export default function About() {
             className="dv-about-boxes"
           >
             {[
-              {
-                icon: "📞",
-                label: "Phone",
-                val: "+94 76 77 94 739",
-              },
+  {
+    icon: "📞",
+    label: "Phone",
+    val: "+94 76 77 94 739",
+  },
 
-              {
-                icon: "✉️",
-                label: "Email",
-                val: "dishajinivaiththilingam@gmail.com",
-              },
+  {
+    icon: "✉️",
+    label: "Email",
+    val: "dishajinivaiththilingam@gmail.com",
+    link: "mailto:dishajinivaiththilingam@gmail.com",
+  },
 
-              {
-                icon: "📍",
-                label: "Address",
-                val: "D4, Maruthanagar, Kilinochchi",
-              },
+  {
+    icon: "📍",
+    label: "Address",
+    val: "D4, Maruthanagar, Kilinochchi",
+  },
 
-              {
-                icon: "🌐",
-                label: "Languages",
-                val: "Tamil · English · Sinhala",
-              },
-            ].map(({ icon, label, val }) => (
-              <div
-                key={label}
-                style={{
-                  background: "#faf7f3",
-                  padding: "2rem 1.5rem",
-                  border: "1.5px solid #e0dbd4",
-                  borderBottom: "4px solid #0f7c6b",
-                  minHeight: "150px",
+  {
+    icon: "🌐",
+    label: "Languages",
+    val: "Tamil · English · Sinhala",
+  },
+].map(({ icon, label, val, link }) => (
+  <div
+    key={label}
+    style={{
+      background: "#faf7f3",
+      padding: "2rem 1.5rem",
+      border: "1.5px solid #e0dbd4",
+      borderBottom: "4px solid #0f7c6b",
+      minHeight: "150px",
 
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
 
-                  transition: "0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-5px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 12px 25px rgba(0,0,0,0.08)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
-              >
-                <div
-                  style={{
-                    width: "52px",
-                    height: "52px",
-                    background: "#e1f5ee",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "1.3rem",
-                    marginBottom: "1rem",
-                    borderRadius: "14px",
-                  }}
-                >
-                  {icon}
-                </div>
+      transition: "0.3s ease",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = "translateY(-5px)";
+      e.currentTarget.style.boxShadow =
+        "0 12px 25px rgba(0,0,0,0.08)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = "translateY(0)";
+      e.currentTarget.style.boxShadow = "none";
+    }}
+  >
+    <div
+      style={{
+        width: "52px",
+        height: "52px",
+        background: "#e1f5ee",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: "1.3rem",
+        marginBottom: "1rem",
+        borderRadius: "14px",
+      }}
+    >
+      {icon}
+    </div>
 
-                <p
-                  style={{
-                    fontFamily: "'Space Grotesk',sans-serif",
-                    fontSize: "0.7rem",
-                    letterSpacing: "0.16em",
-                    color: "#0f7c6b",
-                    textTransform: "uppercase",
-                    marginBottom: "0.6rem",
-                    fontWeight: 700,
-                  }}
-                >
-                  {label}
-                </p>
+    <p
+      style={{
+        fontFamily: "'Space Grotesk',sans-serif",
+        fontSize: "0.7rem",
+        letterSpacing: "0.16em",
+        color: "#0f7c6b",
+        textTransform: "uppercase",
+        marginBottom: "0.6rem",
+        fontWeight: 700,
+      }}
+    >
+      {label}
+    </p>
 
-                <p
-                  style={{
-                    fontFamily: "'DM Sans',sans-serif",
-                    fontSize: "0.95rem",
-                    color: "#222",
-                    lineHeight: 1.7,
-                    fontWeight: 500,
-                  }}
-                >
-                  {val}
-                </p>
-              </div>
-            ))}
+    {link ? (
+      <a
+        href={link}
+        style={{
+          fontFamily: "'DM Sans',sans-serif",
+          fontSize: "0.95rem",
+          color: "#222",
+          lineHeight: 1.7,
+          fontWeight: 500,
+          textDecoration: "none",
+        }}
+      >
+        {val}
+      </a>
+    ) : (
+      <p
+        style={{
+          fontFamily: "'DM Sans',sans-serif",
+          fontSize: "0.95rem",
+          color: "#222",
+          lineHeight: 1.7,
+          fontWeight: 500,
+        }}
+      >
+        {val}
+      </p>
+    )}
+  </div>
+))}
           </div>
 
         </div>

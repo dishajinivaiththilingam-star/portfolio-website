@@ -33,37 +33,101 @@ export default function Contact() {
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              {[
-                { label: "Phone", val: "+94 76 77 94 739", icon: "📞" },
-                { label: "GitHub",val: "https://github.com/dishajinivaiththilingam-star", icon: "💻", },
-                { label: "Email", val: "dishajinivaiththilingam@gmail.com", icon: "✉️" },
-                { label: "Location", val: "SriLanka", icon: "📍" },
-              ].map(({ label, val, icon }) => (
-                <div key={label} style={{
-                  display: "flex", alignItems: "center", gap: "1rem",
-                  borderBottom: "1px solid rgba(255,255,255,0.08)",
-                  paddingBottom: "1rem",
-                }}>
-                  <div style={{
-                    width: "42px", height: "42px", flexShrink: 0,
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontSize: "1.1rem",
-                  }}>{icon}</div>
-                  <div>
-                    <p style={{
-                      fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.62rem",
-                      letterSpacing: "0.15em", color: "rgba(255,255,255,0.3)",
-                      textTransform: "uppercase", marginBottom: "0.2rem",
-                    }}>{label}</p>
-                    <p style={{
-                      fontFamily: "'DM Sans',sans-serif", fontSize: "0.9rem",
-                      color: "rgba(255,255,255,0.75)",
-                    }}>{val}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+  {[
+    { label: "Phone", val: "+94 76 77 94 739", icon: "📞" },
+
+    {
+      label: "GitHub",
+      val: "https://github.com/dishajinivaiththilingam-star",
+      icon: "💻",
+      link: "https://github.com/dishajinivaiththilingam-star",
+    },
+
+    {
+      label: "Email",
+      val: "dishajinivaiththilingam@gmail.com",
+      icon: "✉️",
+      link: "mailto:dishajinivaiththilingam@gmail.com",
+    },
+
+    { label: "Location", val: "SriLanka", icon: "📍" },
+  ].map(({ label, val, icon, link }) => (
+    <div
+      key={label}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "1rem",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        paddingBottom: "1rem",
+      }}
+    >
+      <div
+        style={{
+          width: "42px",
+          height: "42px",
+          flexShrink: 0,
+          border: "1px solid rgba(255,255,255,0.1)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "1.1rem",
+        }}
+      >
+        {icon}
+      </div>
+
+      <div>
+        <p
+          style={{
+            fontFamily: "'Space Grotesk',sans-serif",
+            fontSize: "0.62rem",
+            letterSpacing: "0.15em",
+            color: "rgba(255,255,255,0.3)",
+            textTransform: "uppercase",
+            marginBottom: "0.2rem",
+          }}
+        >
+          {label}
+        </p>
+
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'DM Sans',sans-serif",
+              fontSize: "0.9rem",
+              color: "rgba(255,255,255,0.75)",
+              textDecoration: "none",
+              transition: "0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = "#0f7c6b";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color =
+                "rgba(255,255,255,0.75)";
+            }}
+          >
+            {val}
+          </a>
+        ) : (
+          <p
+            style={{
+              fontFamily: "'DM Sans',sans-serif",
+              fontSize: "0.9rem",
+              color: "rgba(255,255,255,0.75)",
+            }}
+          >
+            {val}
+          </p>
+        )}
+      </div>
+    </div>
+  ))}
+</div>
           </div>
 
           {/* Right: availability card */}
